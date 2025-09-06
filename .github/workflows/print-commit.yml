@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        run: actions/checkout@v5
+        uses: actions/checkout@v4   # ✅ should be "uses", not "run"
         
       - name: Print message
         run: |
-            echo "commit message:"
-            git log -1 --pretty=%B
+          echo "commit message:"
+          git log -1 --pretty=%B
