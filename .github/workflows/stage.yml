@@ -1,9 +1,9 @@
-name: Print Message
+name: Pipeline with stages
 
 on: 
   push:
     branches: 
-      - master
+      - 'main'
       
 jobs: 
   build:
