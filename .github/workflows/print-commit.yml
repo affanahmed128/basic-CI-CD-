@@ -4,12 +4,12 @@ on:
   push:
     branches: 
       - 'main'
-      
+    # - '**' #runs on any branch
 jobs: 
   print-message:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout code  # git hub take the code itself and not cloning as it is done in jenkins
         uses: actions/checkout@v4   # ✅ should be "uses", not "run"
         
       - name: Print message
